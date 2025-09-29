@@ -1,139 +1,67 @@
-# coffee-shop-sales-data
-Coffee Shop Sales dataset (Mar–Jul 2024) records daily transactions with details on date, payment type, product, and sales amount. It supports analysis of customer behavior, popular products, revenue trends, and time-based forecasting for better business insights and inventory planning.
-Key Details:
+# ☕ Coffee Shop Sales Dashboard
 
-Data Period: March 2024 – July 2024 (daily transaction data, continuously updated).
+## 📌 Project Overview
+This project analyzes **coffee shop sales transactions** to uncover insights into product performance, customer preferences, and payment trends.  
+The interactive dashboard highlights **top-selling products, revenue patterns, and cash vs. card usage**, helping businesses make **data-driven decisions** for inventory, pricing, and marketing.
 
-Source: Public dataset by Yaroslav Isaienkov (@ihelon).
+---
 
-Domain: Data Analytics, Sales Forecasting, Customer Behavior Analysis.
+## 🛠 Tools & Technologies
+- **Power BI / Excel** – Data cleaning, modeling, and dashboard creation  
+- **SQL** – Querying and aggregating transactional data (optional)  
+- **Python (Pandas, Matplotlib, Seaborn)** – For deeper Exploratory Data Analysis (EDA) and forecasting (optional extension)
 
-Tools Applicable: Excel, SQL, Python (Pandas, Matplotlib, Seaborn, Scikit-learn), ML.
+---
 
-Difficulty Level: Intermediate.
+## 🔎 Process
 
-**Columns in Dataset:**
+### 1. Data Preparation
+- Cleaned raw dataset (`date, datetime, coffee_name, cash_type, money, card`).  
+- Handled **missing values** (cash transactions had no card info).  
+- Converted transaction dates into **Month, Weekday, Hour** for trend analysis.  
+- Removed duplicates and standardized product names.
 
-date – Transaction date
+### 2. Exploratory Data Analysis (EDA)
+- Analyzed **sales trends over time**.  
+- Identified **popular coffee types** and their revenue contribution.  
+- Segmented purchases by **cash vs. card**.  
+- Discovered **time-based sales patterns** (daily & hourly peaks).  
 
-datetime – Exact timestamp of transaction
+### 3. Dashboard Development
+Built an interactive **Power BI dashboard** with:
+- Bar chart – Highest selling coffee types  
+- Line chart – Count of payment types by coffee name  
+- Donut chart – Sales distribution by product  
+- Pie chart – Cash vs. Card transactions  
+- Stacked bar chart – Sales count by product & payment type  
+- Table – Detailed transactions (coffee, payment type, revenue)
 
-cash_type – Payment method (cash/card)
+---
 
-card – Card ID (anonymized for card transactions)
+## 📊 Key Insights
+- **Top Products:** Latte and Americano with Milk are the highest-selling, generating the most revenue.  
+- **Customer Preferences:** Americano, Cappuccino, and Cortado also perform strongly, while Cocoa and Espresso are least popular.  
+- **Payment Trends:** 92% of purchases are made via **card**, only ~8% via **cash**.  
+- **Revenue Share:** Americano with Milk (21.45%) and Latte (21.45%) are the top contributors to sales.  
+- **Time-Based Trends:** Peak sales occur around **10:00 AM** and **7:00 PM**, with Tuesdays being the busiest weekday.  
 
-money – Transaction amount (price paid)
+---
 
-coffee_name – Type of coffee purchased
+## 🎯 Business Value
+- Helps identify **top-performing products** for promotions and bundling.  
+- Reveals **customer payment behavior** for financial planning.  
+- Supports **inventory optimization** by aligning stock with demand patterns.  
+- Provides a foundation for **sales forecasting models** using time series or ML.  
 
-Additional Features (engineered during analysis):
+---
 
-month, day, hour – Extracted from datetime for time-series and trend analysis.
-**
-Highlights & Insights:**
+## 🚀 Future Work
+- Build **sales forecasting models** (ARIMA, Prophet, XGBoost).  
+- Perform **customer segmentation** for targeted marketing.  
+- Add **geographical sales analysis** (if store/location data is available).  
+- Automate dashboard refresh with live data.  
 
-~1133 transactions recorded.
+---
 
-92% of transactions made using card, 8% with cash.
 
-8 coffee product types available.
 
-Most popular products:
-
-Americano with Milk (23.6%)
-
-Latte (21.4%)
-
-Cappuccino (17.3%)
-
-Revenue Leader: Latte contributes the highest revenue overall.
-
-Peak Sales Hours: Around 10:00 AM and 7:00 PM.
-
-Weekly Trend: Tuesdays show the highest sales activity.
-
-**Customer Insights:**
-
-Morning traffic favors Latte and Americano with Milk.
-
-Evening preferences shift towards Cappuccino, Cocoa, and Hot Chocolate.
-
-Key Details:
-
-Data Period: March 2024 – July 2024 (daily transaction data, continuously updated).
-
-Source: Public dataset by Yaroslav Isaienkov (@ihelon).
-
-Domain: Data Analytics, Sales Forecasting, Customer Behavior Analysis.
-
-Tools Applicable: Excel, SQL, Python (Pandas, Matplotlib, Seaborn, Scikit-learn), ML.
-
-Difficulty Level: Intermediate.
-
-Columns in Dataset:
-
-date – Transaction date
-
-datetime – Exact timestamp of transaction
-
-cash_type – Payment method (cash/card)
-
-card – Card ID (anonymized for card transactions)
-
-money – Transaction amount (price paid)
-
-coffee_name – Type of coffee purchased
-
-Additional Features (engineered during analysis):
-
-month, day, hour – Extracted from datetime for time-series and trend analysis.
-
-Highlights & Insights:
-
-~1133 transactions recorded.
-
-92% of transactions made using card, 8% with cash.
-
-8 coffee product types available.
-
-Most popular products:
-
-Americano with Milk (23.6%)
-
-Latte (21.4%)
-
-Cappuccino (17.3%)
-
-Revenue Leader: Latte contributes the highest revenue overall.
-
-Peak Sales Hours: Around 10:00 AM and 7:00 PM.
-
-Weekly Trend: Tuesdays show the highest sales activity.
-
-Customer Insights:
-
-Morning traffic favors Latte and Americano with Milk.
-
-Evening preferences shift towards Cappuccino, Cocoa, and Hot Chocolate.
-
-**Business Use Cases:**
-
-Demand forecasting (next day/week/month sales).
-
-Inventory optimization based on peak hours & top products.
-
-Customer purchase behavior profiling.
-
-Revenue trend analysis by product & time.
-
- This dataset is excellent for Exploratory Data Analysis (EDA), Sales Forecasting (Time Series ML models), and Customer Segmentation.
-
-Demand forecasting (next day/week/month sales).
-
-Inventory optimization based on peak hours & top products.
-
-Customer purchase behavior profiling.
-
-Revenue trend analysis by product & time.
-
-⚡ This dataset is excellent for Exploratory Data Analysis (EDA), Sales Forecasting (Time Series ML models), and Customer Segmentation.
